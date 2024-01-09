@@ -23,7 +23,7 @@ function App() {
   }, [])
   
   return !loading ? (
-    <div className='w-full px-0 py-0 flex flex-wrap content-between bg-white'>
+    <div className='w-full px-0 py-0 flex flex-wrap content-between bg-purple-200'>
       <div className='w-full'>
         <Header />
         <main>

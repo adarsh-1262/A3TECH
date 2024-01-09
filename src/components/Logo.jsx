@@ -3,7 +3,7 @@ import React from 'react'
 function Logo({width = '40%'}) {
   return (
     <div>
-        <img className='h-auto max-w-10% ' src="src/assets/blacklogo.jpg" alt="Logo"  />
+       <b><img className='w-6 h-4' src="./src/assets/logo.jpeg" alt="" />A3 Blog...</b>
 
     </div>
   )

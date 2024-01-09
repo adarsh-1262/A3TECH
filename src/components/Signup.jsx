@@ -15,6 +15,9 @@ function Signup() {
     const create = async(data) => {
         setError("")
         try {
+            if (!data.termsAndConditions) {
+                throw new Error('Please accept the terms and conditions.');
+              }
             const userData = await authService.createAccount(data)
             if (userData) {
                 const userData = await authService.getCurrentUser()
@@ -81,6 +84,21 @@ function Signup() {
                         {...register("mobile no", {
                             required: true,})}
                         />
+                         <div className="flex items-center">
+                            <input
+                                type="checkbox"
+                                {...register('termsAndConditions', {
+                                required: true,
+                                })}
+                                className="mr-2"
+                            />
+                            <label htmlFor="termsAndConditions" className="text-black/70">
+                                I agree to the{' '}
+                                <Link to="/terms-and-conditions" className="text-primary hover:underline">
+                                Terms and Conditions
+                                </Link>
+                            </label>
+                            </div>
                         <Button type="submit" className="w-full">
                             Create Account
                         </Button>
