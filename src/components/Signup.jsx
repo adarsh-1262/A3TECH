@@ -74,6 +74,13 @@ function Signup() {
                         {...register("password", {
                             required: true,})}
                         />
+                        <Input
+                        label="Mobile No: "
+                        type="mobile no..."
+                        placeholder="Enter your mobile no"
+                        {...register("mobile no", {
+                            required: true,})}
+                        />
                         <Button type="submit" className="w-full">
                             Create Account
                         </Button>
